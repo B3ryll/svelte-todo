@@ -42,7 +42,10 @@ module.exports = () => {
                     use: [
                         "ts-loader",
                     ],
-                    exclude: /node_modules/,
+                    exclude: [
+                        /node_modules/,
+                        /.*\.spec\.ts$/,
+                    ],
                 },
                 {
                     test: /node_modules\/svelte\/.*\.mjs$/,

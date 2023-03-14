@@ -6,22 +6,12 @@
 
     "target": "es6",
     "lib": ["dom", "es6"],
-    // "jsx": "preserve",
-    // "experimentalDecorators": true,
-    // "emitDecoratorMetadata": true,
-    // "jsxFactory": "",
-    // "jsxFragmentFactory": "",
-    // "jsxImportSource": "",
-    // "reactNamespace": "",
-    // "noLib": true,
-    // "useDefineForClassFields": true,
-    // "moduleDetection": "auto",
 
     "baseUrl": "./",
 
     "module": "es6",
     "rootDir": "./",
-    // "moduleResolution": "node",
+    "moduleResolution": "node",
     "paths": {
         "src/*": ["src/*"]
     },
@@ -64,7 +54,6 @@
     // "preserveSymlinks": true,
     "forceConsistentCasingInFileNames": true,
 
-
     "strict": true,
     // "noImplicitAny": true,
     // "strictNullChecks": true,
@@ -85,8 +74,6 @@
     // "allowUnusedLabels": true,
     // "allowUnreachableCode": true,
 
-
-    // "skipDefaultLibCheck": true,
     "skipLibCheck": true
   },
 
