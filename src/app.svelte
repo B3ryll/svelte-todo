@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Task from "./Task.svelte"
+    import Task from "./task.svelte"
 
     let isTaskFormOpen: bool = false
     const formButtonClicked = () => {
