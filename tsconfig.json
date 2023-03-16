@@ -17,7 +17,7 @@
     },
     // "rootDirs": [],
     // "typeRoots": [],
-    "types": ["svelte"],
+    "types": ["svelte", "jest"],
     // "allowUmdGlobalAccess": true,
     // "moduleSuffixes": [],
     // "resolveJsonModule": true,

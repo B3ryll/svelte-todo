@@ -22,15 +22,18 @@
 </script>
 
 <div class="task"
+     data-testid="task-element"
      class:--completed={isCompleted}>
     <input type="checkbox"
+           title="mark task completed"
            on:change={onCheckboxChanged}
            checked={isCompleted}/>
     <span class="task__title">
         {title}
     </span>
 
-    <button on:click={onDelButtonClick}>
+    <button title="delete task"
+            on:click={onDelButtonClick}>
         delete
     </button>
 </div>
