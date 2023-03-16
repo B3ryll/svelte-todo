@@ -21,7 +21,7 @@ describe("Tsak.svelte", (): void => {
         expect(title).toBeInTheDocument()
     })
 
-    test("must show completed when it is done", (): void => {
+    test("must display when it is done", async () => {
         const testTitle    = "write better unit tests"
         const mockCallback = jest.fn()
         
@@ -32,7 +32,7 @@ describe("Tsak.svelte", (): void => {
 
         const checkbox = screen
             .getByTitle("mark task completed")
-        fireEvent.change(
+        await fireEvent.change(
             checkbox,
             {target: {value: true}}
         )
@@ -40,7 +40,6 @@ describe("Tsak.svelte", (): void => {
         const taskElement = screen
             .getByTestId("task-element")
 
-        console.log({cl: taskElement.classList.toString()})
         expect(taskElement.classList.contains("--completed"))
             .toBeTruthy()
 
