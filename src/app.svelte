@@ -47,7 +47,9 @@
 </script>
 
 <main class="todo">
-    <ul class="todo__list">
+    <ul class="todo__list"
+        data-testid="todo-list">
+
         {#each tasks as task}
             <li class="todo__list-item">
                 <Task {...task}
@@ -55,17 +57,22 @@
             </li>
         {/each}
     </ul>
-
-    <form on:submit|preventDefault={handleTaskForm}
-          class="todo__new-task">
-        <input type="text"
-               name="title"
-               class="todo__task-title-field"
-               value={newTaskName}
-               on:change={taskFormChanged}/>
-    </form>
+    
+    {#if isTaskFormOpen}
+        <form on:submit|preventDefault={handleTaskForm}
+              title="create a new task"
+              class="todo__new-task">
+            <input type="text"
+                   data-testid="new-task-name-field"
+                   name="title"
+                   class="todo__task-title-field"
+                   value={newTaskName}
+                   on:change={taskFormChanged}/>
+        </form>
+    {/if}
 
     <button class="todo__add-button"
+            title="add task"
             on:click={formButtonClicked}>
         {#if isTaskFormOpen}
             &#10799;
