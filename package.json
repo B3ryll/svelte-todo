@@ -6,6 +6,10 @@
   "repository": "https://github.com/B3ryll/svelte-todo",
   "author": "B3ryll <b3ryll@proton.me>",
   "license": "MIT",
+  "scripts": {
+    "test": "jest --verbose",
+    "build": "webpack"
+  },
   "devDependencies": {
     "@babel/core": "^7.21.0",
     "@babel/preset-env": "^7.20.2",
